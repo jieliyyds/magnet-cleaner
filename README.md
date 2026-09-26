@@ -29,4 +29,3 @@ Chrome 不允许扩展脚本在 `chrome://` 页面和部分受保护页面运行
 ## 许可证
 
 MIT，详见 [LICENSE](LICENSE)。
-

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Magnet 链接清理",
+  "version": "1.0.0",
+  "description": "复制 Magnet 时在网页右下角预览和清理；全部处理都在本地完成。",
+  "permissions": ["clipboardRead", "clipboardWrite"],
+  "action": {
+    "default_title": "手动清理 Magnet",
+    "default_popup": "popup.html",
+    "default_icon": {"16": "icons/icon16.png", "32": "icons/icon32.png"}
+  },
+  "icons": {"16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png"},
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["cleaner.js", "content.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }]
+}
